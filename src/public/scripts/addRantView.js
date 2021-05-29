@@ -24,7 +24,9 @@ var AddRantView = Backbone.View.extend({
     };
 
     analytics.trackConversion();
-    this.collection.create(rant, { wait: true });
+    if (rant.text.length > 0) {
+      this.collection.create(rant, { wait: true });
+    }
 
     form.rant.value = '';
   }
