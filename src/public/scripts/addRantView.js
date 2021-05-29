@@ -11,7 +11,7 @@ var AddRantView = Backbone.View.extend({
 
   onChange: function(evt) {
     var text = (evt.target || {}).value;
-    if (text) {
+    if (typeof text === 'string') {
       localStorage.setItem('next-rant', text);
     }
   },
