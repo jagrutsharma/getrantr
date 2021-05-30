@@ -1,6 +1,10 @@
 /* global AdCollection, AdListView, AddRantView, RantCollection, RantListView, UserModel, UserView */
 
-$(function() {
+if (!window.$) {
+  console.log('Failed to load JQuery dependency')
+  document.body.innerHTML = "<h1>Sorry, an internal dependency could not be loaded. Please try again after some time.</h1> <div>If problem persists, please email us at support@getrantrs.com</div>"
+}
+else $(function() {
   'use strict';
 
   console.log('I feel a rant coming on.');
